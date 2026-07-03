@@ -1,0 +1,3 @@
+﻿Coloque aqui os sprites futuros do jogo.
+player.png -> substitui automaticamente a forma geometrica do personagem.
+Veja GameAssets em /game/game.js para registrar mais imagens.

@@ -1,0 +1,123 @@
+/* ============================================================
+   DEV SURVIVOR - Estilos da tela do jogo (canvas + overlays)
+   ============================================================ */
+
+.game-body {
+    background: #03060a;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 12px;
+}
+
+.game-wrap {
+    position: relative;
+    width: 100%;
+    max-width: 1280px;
+}
+
+#gameCanvas {
+    display: block;
+    width: 100%;
+    height: auto;
+    background: #06120c;
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    box-shadow: 0 0 40px rgba(77, 243, 163, 0.12);
+    cursor: crosshair;
+}
+
+/* ---------- Overlays ---------- */
+.overlay {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(3, 6, 10, 0.86);
+    border-radius: 6px;
+    z-index: 10;
+}
+.overlay.hidden { display: none; }
+
+.overlay-box {
+    text-align: center;
+    max-width: 640px;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    align-items: center;
+}
+
+.overlay-title {
+    font-size: 2rem;
+    letter-spacing: 3px;
+    text-shadow: 0 0 24px rgba(77, 243, 163, 0.4);
+}
+
+.overlay-map  { color: var(--text-dim); font-size: 0.95rem; }
+.overlay-desc { color: var(--text-dim); font-size: 0.85rem; line-height: 1.6; max-width: 480px; }
+
+.overlay-controls {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+    justify-content: center;
+    font-size: 0.8rem;
+    color: var(--text-dim);
+}
+
+.overlay-actions { display: flex; gap: 12px; flex-wrap: wrap; justify-content: center; }
+
+/* ---------- Cards de habilidade (level up) ---------- */
+.skill-choices {
+    display: flex;
+    gap: 14px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.skill-card {
+    width: 180px;
+    padding: 18px 14px;
+    background: var(--bg-card);
+    border: 1px solid var(--blue);
+    border-radius: 6px;
+    color: var(--text);
+    font-family: var(--mono);
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    align-items: center;
+    transition: all 0.15s;
+}
+.skill-card:hover {
+    border-color: var(--green);
+    transform: translateY(-4px);
+    box-shadow: 0 6px 24px rgba(77, 243, 163, 0.25);
+}
+
+.skill-icon   { font-size: 1.6rem; color: var(--green); font-weight: bold; }
+.skill-name   { font-weight: bold; font-size: 0.92rem; color: var(--blue); }
+.skill-desc   { font-size: 0.74rem; color: var(--text-dim); line-height: 1.5; }
+.skill-stacks { font-size: 0.7rem; color: var(--yellow); }
+
+/* ---------- Game over ---------- */
+.go-stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 14px 34px;
+}
+.go-stats > div { display: flex; flex-direction: column; gap: 2px; }
+.go-label { font-size: 0.7rem; color: var(--text-dim); text-transform: uppercase; letter-spacing: 1px; }
+.go-value { font-size: 1.3rem; font-weight: bold; }
+
+.save-status { font-size: 0.8rem; color: var(--text-dim); }
+.save-ok  { color: var(--green); }
+.save-err { color: var(--red); }
+
+.overlay-loadout { font-size: 0.82rem; color: var(--text-dim); }
+.overlay-objective { font-size: 0.85rem; color: var(--yellow); }

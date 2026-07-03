@@ -1,0 +1,12 @@
+# OS / editor cruft
+Thumbs.db
+Desktop.ini
+.DS_Store
+*.log
+
+# Config local com credenciais reais (se voce criar um)
+config/database.local.php
+
+# Dependencias / build (nao usados neste projeto, mas por seguranca)
+/vendor/
+node_modules/

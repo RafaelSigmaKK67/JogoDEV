@@ -1,0 +1,2 @@
+﻿Coloque aqui arquivos de som (.mp3/.wav) futuros.
+Os sons atuais sao sintetizados via WebAudio na classe Sfx (game/engine.js).
